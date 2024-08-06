@@ -1,12 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Volxyseat.Domain.Core;
+using Volxyseat.Domain.Repositories;
+using Volxyseat.Infrastructure.Data;
 
 namespace Volxyseat.Infrastructure.Repositories
 {
-    public class BaseRepository
+    public abstract class BaseRepository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : Entity<TKey>
     {
+        protected readonly DataContext _dataContext;
+        protected readonly DbSet<TEntity> _entities;
+        public virtual IUnitOfWork UnitOfWork => _dataContext;
+
+        public BaseRepository(DataContext context)
+        {
+            _dataContext = context ?? throw new ArgumentNullException(nameof(context));
+            _entities = _dataContext.Set<TEntity>();
+        }
+        public virtual void AddAsync(TEntity obj)
+        {
+            _entities.AddAsync(obj);
+        }
+
+        public virtual TEntity GetAsync(TKey id)
+        {
+            return _entities.Find(id);
+        }
+
+        public virtual void Update(TEntity obj)
+        {
+            _entities.Update(obj);
+        }
+
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _dataContext.SaveChangesAsync().ConfigureAwait(false);
+        }
     }
 }
