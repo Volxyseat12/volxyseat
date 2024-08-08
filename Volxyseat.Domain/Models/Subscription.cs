@@ -7,6 +7,7 @@ namespace Volxyseat.Domain.Models
         private readonly List<SubscriptionHistory> _histories;
 
         public Subscription(
+            Guid id,
             SubscriptionEnum typeId,
             SubscriptionStatus statusId,
             string description,
@@ -14,6 +15,7 @@ namespace Volxyseat.Domain.Models
             DateTime createdOn,
             DateTime updatedOn)
         {
+            Id = id;
             _typeId = typeId;
             _statusId = statusId;
             Description = description;

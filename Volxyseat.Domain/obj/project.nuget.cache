@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pF+vp3iPsxGKhbKACp7lvyFnulNW2n17JlWfCkJlKl86ffEwCGdJe0kI/zvhD676Fhq16Cs9YHYMrdHR78EyJg==",
+  "dgSpecHash": "Vc6ziE0DwuQ=",
   "success": true,
-  "projectFilePath": "C:\\dev\\volxyseat\\Volxyseat.Domain\\Volxyseat.Domain.csproj",
+  "projectFilePath": "C:\\PI\\volxyseat\\Volxyseat.Domain\\Volxyseat.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\leozi\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
-    "C:\\Users\\leozi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\leozi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\pedro\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

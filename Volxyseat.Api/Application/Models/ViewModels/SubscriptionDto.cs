@@ -4,7 +4,7 @@ namespace Volxyseat.Api.Application.Models.ViewModels
 {
     public class SubscriptionDto
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public SubscriptionTypeEnum Type { get; set; }
         public SubscriptionStatusEnum Status { get; set; }
         public string Description { get; set; }

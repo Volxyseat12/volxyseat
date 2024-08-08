@@ -21,6 +21,7 @@ namespace Volxyseat.Api.Application.Commands.CreateSubscription
             if (request == null) throw new ArgumentNullException(nameof(request));
 
             var subscription = new Subscription(
+                request.Subscription.Id,
                 request.TypeId,
                 request.StatusId,
                 request.Description,

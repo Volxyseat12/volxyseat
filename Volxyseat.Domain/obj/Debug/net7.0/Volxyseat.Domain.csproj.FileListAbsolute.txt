@@ -11,3 +11,16 @@ C:\dev\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.dll
 C:\dev\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\refint\Volxyseat.Domain.dll
 C:\dev\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.pdb
 C:\dev\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\ref\Volxyseat.Domain.dll
+C:\PI\volxyseat\Volxyseat.Domain\bin\Debug\net7.0\Volxyseat.Domain.deps.json
+C:\PI\volxyseat\Volxyseat.Domain\bin\Debug\net7.0\Volxyseat.Domain.dll
+C:\PI\volxyseat\Volxyseat.Domain\bin\Debug\net7.0\Volxyseat.Domain.pdb
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.csproj.AssemblyReference.cache
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.AssemblyInfoInputs.cache
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.AssemblyInfo.cs
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.csproj.CoreCompileInputs.cache
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.sourcelink.json
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.dll
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\refint\Volxyseat.Domain.dll
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\Volxyseat.Domain.pdb
+C:\PI\volxyseat\Volxyseat.Domain\obj\Debug\net7.0\ref\Volxyseat.Domain.dll
