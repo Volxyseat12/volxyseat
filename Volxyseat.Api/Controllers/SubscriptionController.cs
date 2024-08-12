@@ -16,13 +16,22 @@ namespace Volxyseat.Api.Controllers
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromQuery] GetSubscriptionQuery query)
         {
             var result = await _mediator.Send(query);
 
             return Ok(result);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll([FromQuery] GetAllSubscriptionQuery query)
+        {
+            var result = await _mediator.Send(query);
+
+            return Ok(result);
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateSubscriptionCommand command)

@@ -17,7 +17,7 @@ namespace Volxyseat.Infrastructure.Repositories
             return await _entities.FindAsync(id);
         }
 
-        public List<Subscription> GetAll()
+        public IEnumerable<Subscription> GetAll()
         {
             return _entities.ToList();
         }

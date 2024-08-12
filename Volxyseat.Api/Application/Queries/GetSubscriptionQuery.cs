@@ -7,4 +7,9 @@ namespace Volxyseat.Api.Application.Queries
     {
         public Guid Id { get; set; }
     }
+
+    public class GetAllSubscriptionQuery : IRequest<IEnumerable<SubscriptionDto>>
+    {
+
+    }
 }
