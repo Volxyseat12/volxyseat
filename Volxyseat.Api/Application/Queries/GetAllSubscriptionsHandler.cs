@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Volxyseat.Api.Application.Models.ViewModels;
 using Volxyseat.Domain.Repositories;
 
 namespace Volxyseat.Api.Application.Queries
 {
-    public class GetAllSubscriptionsHandlerIRequestHandler<GetAllSubscriptionsQuery, SubscriptionDto>
+    public class GetAllSubscriptionsHandlerIRequestHandler : IRequestHandler<GetAllSubscriptionQuery, IEnumerable<SubscriptionDto>>
     {
         private readonly IVolxyseatRepository _repository;
 
@@ -16,26 +18,26 @@ namespace Volxyseat.Api.Application.Queries
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        public async Task<IEnumerable<SubscriptionDto>> Handle(GetAllSubscriptionQuery request, CancellationToken cancellationToken)
+        public Task<IEnumerable<SubscriptionDto>> Handle(GetAllSubscriptionQuery request, CancellationToken cancellationToken)
         {
             var subscriptions = _repository.GetAll();
 
             var query = subscriptions.AsQueryable();
 
-            var data = query.AsNoTracking().Select(item => new
+            var data = query.AsNoTracking().Select(item => new SubscriptionDto
             {
-                item.Id,
-                item._typeId,
-                item._statusId,
-                item.Description,
-                item.Price,
-                item.CreatedOn,
-                item.UpdatedOn
-            });
+                Id = item.Id,
+                Type = item._typeId,
+                Status = item._statusId,
+                Description = item.Description,
+                Price = item.Price,
+                CreatedOn = item.CreatedOn,
+                UpdatedOn = item.UpdatedOn
+            }).AsEnumerable();
 
 
-            return (IEnumerable<SubscriptionDto>)data;
 
+            return Task.FromResult(data);
         }
     }
 }

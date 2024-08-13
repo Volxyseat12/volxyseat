@@ -17,21 +17,23 @@ namespace Volxyseat.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery] GetSubscriptionQuery query)
+        public async Task<IActionResult> Get(Guid id)
         {
+            var query = new GetSubscriptionQuery(id);
+
             var result = await _mediator.Send(query);
 
             return Ok(result);
         }
+
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] GetAllSubscriptionQuery query)
+        public async Task<IActionResult> GetAll()
         {
-            var result = await _mediator.Send(query);
-
-            return Ok(result);
+            var query = new GetAllSubscriptionQuery();
+            var person = await _mediator.Send(query);
+            return person != null ? Ok(person) : NotFound();
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateSubscriptionCommand command)
