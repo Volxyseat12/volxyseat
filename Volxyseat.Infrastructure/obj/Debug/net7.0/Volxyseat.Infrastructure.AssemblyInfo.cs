@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Volxyseat.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+378de0b01d478193259ee929b8e58d7b27ff5d23")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f44203e5d03841c15b083ca307e81d888c21814")]
 [assembly: System.Reflection.AssemblyProductAttribute("Volxyseat.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Volxyseat.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

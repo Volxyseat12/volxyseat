@@ -33,8 +33,8 @@ namespace Volxyseat.Api.Application.Commands.CreateSubscription
             _repository.AddAsync(subscription);
 
             var result = await _repository.UnitOfWork.SaveChangesAsync(cancellationToken);
-
-            return result > 0;
+            Console.WriteLine(subscription.Id);
+            return subscription.Id != Guid.Parse("00000000-0000-0000-0000-000000000000");
         }
     }
 }

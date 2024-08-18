@@ -3,8 +3,7 @@ using Volxyseat.Api.Application.Models.ViewModels;
 
 namespace Volxyseat.Api.Application.Queries
 {
-    public class GetSubscriptionQuery : IRequest<SubscriptionDto>
-    {
-        public Guid Id { get; set; }
-    }
+    public record GetSubscriptionQuery(Guid Id) : IRequest<SubscriptionDto>;
+
+    public record GetAllSubscriptionQuery : IRequest<IEnumerable<SubscriptionDto>>;
 }

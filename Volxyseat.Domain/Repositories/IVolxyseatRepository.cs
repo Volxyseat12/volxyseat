@@ -9,7 +9,7 @@ namespace Volxyseat.Domain.Repositories
 {
     public interface IVolxyseatRepository : IRepository<Subscription, Guid>
     {
-        List<Subscription> GetAll();
+        IEnumerable<Subscription> GetAll();
         Task<Subscription> GetByIdAsync(Guid id);
     }
 }
