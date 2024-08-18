@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Volxyseat.Domain.Core;
 
 namespace Volxyseat.Infrastructure.Data
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
+        private readonly DataContext _context;
+
+        public UnitOfWork(DataContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            return await _context.SaveChangesAsync(cancellationToken);
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
     }
 }

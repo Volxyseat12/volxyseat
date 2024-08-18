@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Volxyseat.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+<<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab884a2501fde58975b2efabd322934ce9671b9c")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f44203e5d03841c15b083ca307e81d888c21814")]
+>>>>>>> error/getAll
 [assembly: System.Reflection.AssemblyProductAttribute("Volxyseat.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Volxyseat.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

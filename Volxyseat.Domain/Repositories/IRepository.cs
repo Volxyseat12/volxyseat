@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Volxyseat.Domain.Core;
+﻿using Volxyseat.Domain.Core;
 
 namespace Volxyseat.Domain.Repositories
 {
-    public interface IRepository //herdar de entity
+    public interface IRepository<TEntity, TKey> where TEntity : Entity<TKey>
     {
+        void AddAsync(TEntity obj);
+        TEntity GetAsync (TKey id);
+        void Update(TEntity obj);
+        IUnitOfWork UnitOfWork { get; }
     }
 }
