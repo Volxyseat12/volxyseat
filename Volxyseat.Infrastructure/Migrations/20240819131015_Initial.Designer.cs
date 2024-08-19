@@ -11,7 +11,7 @@ using Volxyseat.Infrastructure.Data;
 namespace Volxyseat.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240805223749_Initial")]
+    [Migration("20240819131015_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

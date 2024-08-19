@@ -2,12 +2,11 @@
 
 namespace Volxyseat.Domain.Models
 {
-    public class Subscription : Entity<Guid>
+    public class Subscription : Entity
     {
         private readonly List<SubscriptionHistory> _histories;
 
         public Subscription(
-            Guid id,
             SubscriptionEnum typeId,
             SubscriptionStatus statusId,
             string description,
@@ -15,9 +14,8 @@ namespace Volxyseat.Domain.Models
             DateTime createdOn,
             DateTime updatedOn)
         {
-            Id = id;
-            _typeId = typeId;
-            _statusId = statusId;
+            TypeId = typeId;
+            StatusId = statusId;
             Description = description;
             Price = price;
             CreatedOn = createdOn;
@@ -25,8 +23,8 @@ namespace Volxyseat.Domain.Models
             _histories = new List<SubscriptionHistory>();
         }
 
-        public SubscriptionEnum _typeId { get; private set; }
-        public SubscriptionStatus _statusId { get; private set; }
+        public SubscriptionEnum TypeId { get; private set; }
+        public SubscriptionStatus StatusId { get; private set; }
         public IReadOnlyList<SubscriptionHistory> Histories => _histories;
         public string Description { get; private set; }
         public double Price { get; private set; }

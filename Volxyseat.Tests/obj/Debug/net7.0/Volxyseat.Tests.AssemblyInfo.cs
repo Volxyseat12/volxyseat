@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Volxyseat.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f44203e5d03841c15b083ca307e81d888c21814")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38d7e3ec0bba3df8f5da453cb00ab2898cd5f731")]
 [assembly: System.Reflection.AssemblyProductAttribute("Volxyseat.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Volxyseat.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Volxyseat.Api.Application.Commands.CreateSubscription;
+using Volxyseat.Api.Application.Models.Request;
 using Volxyseat.Api.Application.Queries;
 
 namespace Volxyseat.Api.Controllers
@@ -36,11 +37,10 @@ namespace Volxyseat.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CreateSubscriptionCommand command)
+        public async Task<IActionResult> Post([FromBody] CreateSubscriptionCommand request)
         {
-            var result = await _mediator.Send(command);
-
-            return Ok(result);
+            var result = await _mediator.Send(request);
+            return result ? Ok() : BadRequest();
         }
     }
 }

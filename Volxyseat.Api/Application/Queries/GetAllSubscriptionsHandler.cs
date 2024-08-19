@@ -27,8 +27,8 @@ namespace Volxyseat.Api.Application.Queries
             var data = query.AsNoTracking().Select(item => new SubscriptionDto
             {
                 Id = item.Id,
-                Type = item._typeId,
-                Status = item._statusId,
+                Type = item.TypeId,
+                Status = item.StatusId,
                 Description = item.Description,
                 Price = item.Price,
                 CreatedOn = item.CreatedOn,

@@ -1,11 +1,9 @@
 ﻿using Volxyseat.Domain.Models;
 
-namespace Volxyseat.Api.Application.Models.ViewModels
+namespace Volxyseat.Api.Application.Models.Request
 {
-    public class SubscriptionDto
+    public class RequestSubscription
     {
-
-        public Guid Id { get; set; } = Guid.NewGuid();
         public SubscriptionEnum Type { get; set; }
         public SubscriptionStatus Status { get; set; }
         public string Description { get; set; }

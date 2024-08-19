@@ -5,7 +5,7 @@ using Volxyseat.Infrastructure.Data;
 
 namespace Volxyseat.Infrastructure.Repositories
 {
-    public abstract class BaseRepository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : Entity<TKey>
+    public abstract class BaseRepository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : Entity
     {
         protected readonly DataContext _dataContext;
         protected readonly DbSet<TEntity> _entities;

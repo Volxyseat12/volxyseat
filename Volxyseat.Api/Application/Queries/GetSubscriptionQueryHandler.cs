@@ -23,7 +23,6 @@ namespace Volxyseat.Api.Application.Queries
 
             return new SubscriptionDto
             {
-                Id = subscription.Id,
                 Description = subscription.Description,
                 Price = subscription.Price,
                 CreatedOn = subscription.CreatedOn,
