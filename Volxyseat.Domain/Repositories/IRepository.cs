@@ -2,7 +2,7 @@
 
 namespace Volxyseat.Domain.Repositories
 {
-    public interface IRepository<TEntity, TKey> where TEntity : Entity<TKey>
+    public interface IRepository<TEntity, TKey> where TEntity : Entity
     {
         void AddAsync(TEntity obj);
         TEntity GetAsync (TKey id);

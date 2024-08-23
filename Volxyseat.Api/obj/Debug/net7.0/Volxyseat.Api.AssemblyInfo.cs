@@ -11,14 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("d2c85673-7385-4a85-9de9-55fb8690e797")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Volxyseat.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab884a2501fde58975b2efabd322934ce9671b9c")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f44203e5d03841c15b083ca307e81d888c21814")]
->>>>>>> error/getAll
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73fb3aaccbb8a6e4c8c52967daed71ab6d64600b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Volxyseat.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Volxyseat.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,9 +11,9 @@ namespace Volxyseat.Api.Application.Queries
 {
     public class GetAllSubscriptionsHandlerIRequestHandler : IRequestHandler<GetAllSubscriptionQuery, IEnumerable<SubscriptionDto>>
     {
-        private readonly IVolxyseatRepository _repository;
+        private readonly ISubscriptionRepository _repository;
 
-        public GetAllSubscriptionsHandlerIRequestHandler(IVolxyseatRepository repository)
+        public GetAllSubscriptionsHandlerIRequestHandler(ISubscriptionRepository repository)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
@@ -27,8 +27,8 @@ namespace Volxyseat.Api.Application.Queries
             var data = query.AsNoTracking().Select(item => new SubscriptionDto
             {
                 Id = item.Id,
-                Type = item._typeId,
-                Status = item._statusId,
+                Type = item.TypeId,
+                Status = item.StatusId,
                 Description = item.Description,
                 Price = item.Price,
                 CreatedOn = item.CreatedOn,

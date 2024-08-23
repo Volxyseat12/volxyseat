@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volxyseat.Domain", "Volxyse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volxyseat.Infrastructure", "Volxyseat.Infrastructure\Volxyseat.Infrastructure.csproj", "{308C7C39-564C-47E1-9ECB-DE4F23389C4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volxyseat.Tests", "Volxyseat.Tests\Volxyseat.Tests.csproj", "{2310FC19-380C-4605-A50F-F1DF3E7D4F46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volxyseat.Tests", "Volxyseat.Tests\Volxyseat.Tests.csproj", "{2310FC19-380C-4605-A50F-F1DF3E7D4F46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D440FF7-6124-4474-8671-BC22FBFB16CE}
 	EndGlobalSection
 EndGlobal

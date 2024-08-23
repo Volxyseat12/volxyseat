@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Vc6ziE0DwuQ=",
+  "dgSpecHash": "7s0KCDYNvNsu1lkutMXEuIw/yVft8cYrbUf2FQqcxLmeAoXeNYigoqZXxBlARdPVbiBBWlihF075PUCY70+Xlg==",
   "success": true,
-  "projectFilePath": "C:\\PI\\volxyseat\\Volxyseat.Domain\\Volxyseat.Domain.csproj",
+  "projectFilePath": "C:\\dev\\2\\volxyseat\\Volxyseat.Domain\\Volxyseat.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pedro\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\leonardo.santos\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
+    "C:\\Users\\leonardo.santos\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\leonardo.santos\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\leonardo.santos\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\leonardo.santos\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\leonardo.santos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
   ],
   "logs": []
 }

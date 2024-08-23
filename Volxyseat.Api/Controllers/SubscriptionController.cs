@@ -1,6 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using Volxyseat.Api.Application.Commands.CreateSubscription;
+using Volxyseat.Api.Application.Commands.CreateUser;
+using Volxyseat.Api.Application.Models.Request;
+using Volxyseat.Api.Application.Models.ViewModels;
 using Volxyseat.Api.Application.Queries;
 
 namespace Volxyseat.Api.Controllers
@@ -28,6 +32,8 @@ namespace Volxyseat.Api.Controllers
 
 
         [HttpGet]
+        [ProducesResponseType(typeof(SubscriptionViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<IActionResult> GetAll()
         {
             var query = new GetAllSubscriptionQuery();
@@ -35,12 +41,23 @@ namespace Volxyseat.Api.Controllers
             return person != null ? Ok(person) : NotFound();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CreateSubscriptionCommand command)
-        {
-            var result = await _mediator.Send(command);
+        [HttpPost("/new-subscription")]
+        [ProducesResponseType(typeof(SubscriptionViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
 
-            return Ok(result);
+        public async Task<IActionResult> Post([FromBody] CreateSubscriptionCommand request)
+        {
+            var result = await _mediator.Send(request);
+            return result ? Ok() : BadRequest();
+        }
+
+        [HttpPost("/new-user")]
+        [ProducesResponseType(typeof(UserViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> Post([FromBody] CreateUserCommand request)
+        {
+            var result = await _mediator.Send(request);
+            return result ? Ok() : BadRequest();
         }
     }
 }

@@ -6,9 +6,9 @@ namespace Volxyseat.Api.Application.Queries
 {
     public class GetSubscriptionQueryHandler : IRequestHandler<GetSubscriptionQuery, SubscriptionDto>
     {
-        private readonly IVolxyseatRepository _repository;
+        private readonly ISubscriptionRepository _repository;
 
-        public GetSubscriptionQueryHandler(IVolxyseatRepository repository)
+        public GetSubscriptionQueryHandler(ISubscriptionRepository repository)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
@@ -23,7 +23,6 @@ namespace Volxyseat.Api.Application.Queries
 
             return new SubscriptionDto
             {
-                Id = subscription.Id,
                 Description = subscription.Description,
                 Price = subscription.Price,
                 CreatedOn = subscription.CreatedOn,

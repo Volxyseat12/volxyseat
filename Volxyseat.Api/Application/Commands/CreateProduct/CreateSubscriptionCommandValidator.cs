@@ -6,11 +6,8 @@ namespace Volxyseat.Api.Application.Commands.CreateSubscription
 {
     public class CreateSubscriptionCommandValidator : AbstractValidator<CreateSubscriptionCommand>
     {
-        private readonly IVolxyseatRepository _repository;
-
-        public CreateSubscriptionCommandValidator(IVolxyseatRepository repository)
+        public CreateSubscriptionCommandValidator(ISubscriptionRepository repository)
         {
-            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
 
             RuleFor(x => x.TypeId)
                 .IsInEnum().WithMessage("Invalid TypeId")

@@ -20,6 +20,7 @@ namespace Volxyseat.Infrastructure.Data
         }
 
         public DbSet<Subscription> Subscriptions { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<SubscriptionHistory> SubscriptionHistories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -12,16 +12,16 @@ namespace Volxyseat.Infrastructure.Configurations
             builder.ToTable("Subscription", DataContext.DEFAULT_SCHEMA);
 
             builder.Property(_ => _.Id)
-                .ValueGeneratedNever();
+                .ValueGeneratedOnAdd();
 
-            builder.Property(s => s._typeId)
+            builder.Property(s => s.TypeId)
                 .HasConversion(
                     v => (int)v,
                     v => (SubscriptionEnum)v)
                 .HasColumnName("TypeId")
                 .IsRequired();
 
-            builder.Property(s => s._statusId) 
+            builder.Property(s => s.StatusId) 
                 .HasConversion(
                     v => (int)v,
                     v => (SubscriptionStatus)v)

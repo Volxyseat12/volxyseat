@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using MediatR;
+﻿using MediatR;
 using Volxyseat.Domain.Models;
 using Volxyseat.Domain.Repositories;
 
@@ -9,9 +6,9 @@ namespace Volxyseat.Api.Application.Commands.CreateSubscription
 {
     public class CreateSubscriptionCommandHandler : IRequestHandler<CreateSubscriptionCommand, bool>
     {
-        private readonly IVolxyseatRepository _repository;
+        private readonly ISubscriptionRepository _repository;
 
-        public CreateSubscriptionCommandHandler(IVolxyseatRepository repository)
+        public CreateSubscriptionCommandHandler(ISubscriptionRepository repository)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
@@ -21,7 +18,6 @@ namespace Volxyseat.Api.Application.Commands.CreateSubscription
             if (request == null) throw new ArgumentNullException(nameof(request));
 
             var subscription = new Subscription(
-                request.Subscription.Id,
                 request.TypeId,
                 request.StatusId,
                 request.Description,
@@ -33,8 +29,7 @@ namespace Volxyseat.Api.Application.Commands.CreateSubscription
             _repository.AddAsync(subscription);
 
             var result = await _repository.UnitOfWork.SaveChangesAsync(cancellationToken);
-            Console.WriteLine(subscription.Id);
-            return subscription.Id != Guid.Parse("00000000-0000-0000-0000-000000000000");
+            return result > 0;
         }
     }
 }
